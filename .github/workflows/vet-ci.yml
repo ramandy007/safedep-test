@@ -34,9 +34,15 @@ jobs:
           # Path to the policy file.
           # Remove following line to use the default policy
           policy: .github/vet/policy.yml
+          cloud: true
+          cloud-key: ${{ secrets.SAFEDEP_CLOUD_API_KEY }}
+          cloud-tenant: ${{ secrets.SAFEDEP_CLOUD_TENANT_DOMAIN }}
+          
         env:
           # Required for writing pull request comment
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+
 
       # Comment the below upload action if you are using
       # private repository and Code Scanning is not available
