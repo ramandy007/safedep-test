@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - master
+  schedule:
+      - cron: '0 0 */2 * *'
 
 permissions:
   # Required for actions/checkout@v4
