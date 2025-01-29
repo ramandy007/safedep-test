@@ -46,9 +46,9 @@ jobs:
           
 
 
-      Comment the below upload action if you are using
-      private repository and Code Scanning is not available
-      for your Github subscription
+      # Comment the below upload action if you are using
+      # private repository and Code Scanning is not available
+      # for your Github subscription
       - name: Upload SARIF
         uses: github/codeql-action/upload-sarif@v3
         if: ${{ steps.vet.outputs.report != '' }}
